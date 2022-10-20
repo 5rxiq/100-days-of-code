@@ -17,8 +17,6 @@ def highest_bid(bid_list):
         if bid_list[key] > top_bid:
             top_bid = bid_list[key]
             top_bidder = key
-    print(top_bid)
-    print(top_bidder)
     print(f"The top bidder is {top_bidder} with a winning bid of {top_bid}!")
 
 

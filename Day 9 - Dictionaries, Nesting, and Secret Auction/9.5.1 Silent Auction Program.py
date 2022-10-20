@@ -18,7 +18,6 @@ while keep_going == "Yes":
     clear()
 
 max_value = max(bids.values())
-
 max_key = max(bids, key=bids.get)
 
 print(f"Congratulations, {max_key}, you are the winner with a bid of {max_value}!")

@@ -36,17 +36,26 @@ while keep_playing:
         computer_sum += card
 
     print(f"Your cards are: {player}; Your score is {player_sum}")
-    print(f"The dealer's first card is: {computer[0]}")
 
     if player_sum > 21:
+        print(f"The dealer's cards are: {computer}; The dealer's total is {computer_sum}")
         print("Bust!")
         keep_playing = False
+    elif player_sum == 21 and computer_sum < 21:
+        print(f"The dealer's cards are: {computer}; The dealer's total is {computer_sum}")
+        print("You win!")
+        keep_playing = False
+    elif player_sum == 21 and computer_sum == 21:
+        print(f"The dealer's cards are: {computer}; The dealer's total is {computer_sum}")
+        print("You tied!")
+        keep_playing = False
     else:
+        print(f"The dealer's first card is: {computer[0]}")
         cont = input("Would you like to 'hit' or 'pass'?")
 
     if cont == "pass":
-        print(f"Your cards are: {player}; Your score is {player_sum}")
-        print(f"The dealer's cards are: {computer}; The dealer's score is {computer_sum}")
+        print(f"Your cards are: {player}; Your total is {player_sum}")
+        print(f"The dealer's cards are: {computer}; The dealer's total is {computer_sum}")
         if player_sum > computer_sum and player_sum <= 21:
             print("You won!")
         elif player_sum == computer_sum:

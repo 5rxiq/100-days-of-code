@@ -67,3 +67,4 @@ while keep_playing:
         else:
             print("You lost.")
         keep_playing = False
+

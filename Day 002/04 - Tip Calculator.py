@@ -15,5 +15,5 @@ split_cnt = int(input('How many people are splitting the bill? '))
 split_amt = round((bill_total * multiplier) / split_cnt,2)
 split_amt = "{:.2f}".format(split_amt)
 
-print(f'Each person should pay: ${split_amt}')
+print('\n' + f'Each person should pay: ${split_amt}')
 

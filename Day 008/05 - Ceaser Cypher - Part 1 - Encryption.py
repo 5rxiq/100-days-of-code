@@ -13,7 +13,8 @@ def encrypt(text,shift):
         new_index = index + shift
 
         if new_index > (len(alphabet)-1):
-            new_index = new_index - (len(alphabet))
+            #new_index = new_index - (len(alphabet))
+            new_index = new_index % 26
 
         encrypted += alphabet[new_index]
 

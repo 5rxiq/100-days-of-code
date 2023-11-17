@@ -29,7 +29,6 @@ def decrypt(text,shift):
 
         decrypted += alphabet[new_index]
 
-    print(alphabet)
     print(decrypted)
 
 

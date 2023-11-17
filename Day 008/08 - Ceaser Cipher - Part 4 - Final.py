@@ -4,10 +4,6 @@ alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'
 
 print(art.logo)
 
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-text = input("Type your message:\n").lower()
-shift = int(input("Type the shift number:\n"))
-
 def caesar(text,shift,direction):
     message = ""
 
@@ -48,11 +44,13 @@ def caesar(text,shift,direction):
 go_again = True
 
 while go_again == True: 
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+
     caesar(text, shift, direction)
+
     retry = input("Would you like to go again? yes or no: \n")
     if retry.lower() == "no":
         go_again = False
-    else:
-        direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-        text = input("Type your message:\n").lower()
-        shift = int(input("Type the shift number:\n"))
+        print("Goodbye")

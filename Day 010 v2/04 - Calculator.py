@@ -51,7 +51,7 @@ def start_calculating():
 
     num2 = int(input("What's the second number? "))
 
-    answer = operations[operations_symbol](num1,num2)
+    answer = operations[operations_symbol](n1=num1,n2=num2)
     num1 = answer 
 
     print(f"{num1} {operations_symbol} {num2} = {answer}")
@@ -66,10 +66,9 @@ def start_calculating():
 
         num2 = int(input("What's the second number? "))
 
-        answer = operations[operations_symbol](num1,num2)
+        answer = operations[operations_symbol](n1=num1,n2=num2)
         num1 = answer 
 
         print(f"{num1} {operations_symbol} {num2} = {answer}")
-
 
 start_calculating()
